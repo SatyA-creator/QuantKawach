@@ -204,42 +204,7 @@ export default function ProductPage() {
       </SectionWrapper>
 
       {/* CTA */}
-      <SectionWrapper>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6">
-                Explore the Technology
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Learn about the cryptographic algorithms and innovations powering QuantKawach
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button 
-                  asChild 
-                  size="lg" 
-                  className="w-full bg-primary px-8 text-primary-foreground hover:bg-primary/90 sm:w-auto"
-                >
-                  <Link href="/technology">
-                    View Technology
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  size="lg"
-                  className="w-full border-primary/20 px-8 hover:bg-primary/5 sm:w-auto"
-                >
-                  <Link href="/contact">
-                    Request Demo
-                  </Link>
-                </Button>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </SectionWrapper>
+    
 
       <Footer />
     </div>

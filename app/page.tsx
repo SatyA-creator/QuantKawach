@@ -29,6 +29,8 @@ import { Footer } from '@/components/footer'
 import { RangoliAnimation } from '@/components/rangoli-animation'
 import { SectionWrapper, FadeIn } from '@/components/section-wrapper'
 
+const GRAD = 'linear-gradient(135deg, #4c1d95, #0d9488)'
+
 const problemStatements = [
   {
     icon: Key,
@@ -149,9 +151,9 @@ export default function HomePage() {
 
       <section className="relative isolate flex min-h-screen items-center overflow-hidden pb-14 pt-24 sm:pb-16 sm:pt-28 lg:pt-32">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/40 to-background" />
-        <div className="absolute -top-32 -left-24 h-[28rem] w-[28rem] rounded-full bg-saffron/20 blur-3xl" />
-        <div className="absolute -bottom-24 right-0 h-[30rem] w-[30rem] rounded-full bg-indigo/20 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,153,51,0.18),transparent_45%),radial-gradient(circle_at_80%_70%,rgba(59,54,108,0.2),transparent_48%)]" />
+        <div className="absolute -top-32 -left-24 h-[28rem] w-[28rem] rounded-full bg-accent/20 blur-3xl" />
+        <div className="absolute -bottom-24 right-0 h-[30rem] w-[30rem] rounded-full bg-primary/20 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(76,29,149,0.18),transparent_45%),radial-gradient(circle_at_80%_70%,rgba(13,148,136,0.2),transparent_48%)]" />
 
         <RangoliAnimation />
         <div className="absolute inset-0 bg-background/45 backdrop-blur-[1.5px]" />
@@ -174,10 +176,11 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="mt-6 bg-gradient-to-r bg-gradient-to-br from-primary to-[#f98f3a] bg-clip-text font-serif text-3xl font-bold leading-[1.08] text-transparent sm:text-5xl lg:text-6xl xl:text-7xl"
+                className="mt-6 bg-clip-text font-serif text-3xl font-bold leading-[1.08] text-transparent sm:text-5xl lg:text-6xl xl:text-7xl"
+                style={{ backgroundImage: GRAD }}
               >
                 Protect Every Banking API
-                <span className="block bg-gradient-to-br from-primary via-primary to-[#f98f3a] bg-clip-text text-transparent">
+                <span className="block bg-clip-text text-transparent" style={{ backgroundImage: GRAD }}>
                   Before Quantum Threats Arrive
                 </span>
               </motion.h1>
@@ -236,7 +239,7 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="rounded-2xl bg-gradient-to-br from-primary to-indigo p-5 text-white">
+                  <div className="rounded-2xl p-5 text-white" style={{ background: GRAD }}>
                     <p className="text-xs uppercase opacity-70">Gateway Status</p>
                     <p className="mt-2 text-2xl font-semibold">Protected</p>
                     <p className="mt-2 text-sm opacity-80">
@@ -246,15 +249,15 @@ export default function HomePage() {
 
                   <div className="space-y-3">
                     <div className="flex items-center gap-3 rounded-xl border border-primary/15 bg-background/70 px-4 py-3">
-                      <Lock className="h-4 w-4 text-saffron" />
+                      <Lock className="h-4 w-4 text-accent" />
                       <span className="text-sm">Key exchange hardened</span>
                     </div>
                     <div className="flex items-center gap-3 rounded-xl border border-primary/15 bg-background/70 px-4 py-3">
-                      <Fingerprint className="h-4 w-4 text-saffron" />
+                      <Fingerprint className="h-4 w-4 text-accent" />
                       <span className="text-sm">Device-bound identity</span>
                     </div>
                     <div className="flex items-center gap-3 rounded-xl border border-primary/15 bg-background/70 px-4 py-3">
-                      <Zap className="h-4 w-4 text-saffron" />
+                      <Zap className="h-4 w-4 text-accent" />
                       <span className="text-sm">Optimized for payments</span>
                     </div>
                   </div>
@@ -269,11 +272,11 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="mx-auto mb-14 max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Section 2</p>
-            <h2 className="mb-6 mt-3 bg-gradient-to-r from-[#000FFF] via-primary to-[#f98f3a] bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl">
+            <h2 className="mb-6 mt-3 bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl" style={{ backgroundImage: GRAD }}>
               Problem Statement
             </h2>
-            <p className="text-base text-muted-foreground md:text-lg">Why QuantZen</p>
-            <p className="mt-4 text-xl font-semibold text-primary md:text-2xl">TLS secures transport. QuantZen secures identity.</p>
+            <p className="text-base text-muted-foreground md:text-lg">Why QuantKawach</p>
+            <p className="mt-4 text-xl font-semibold text-primary md:text-2xl">TLS secures transport. QuantKawach secures identity.</p>
           </FadeIn>
 
           <div className="grid gap-5 md:grid-cols-2">
@@ -284,12 +287,12 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
-                className="rounded-2xl border border-primary/15 bg-card/80 p-6 shadow-[0_16px_45px_-25px_rgba(0,15,255,0.4)] backdrop-blur-sm"
+                className="rounded-2xl border border-primary/15 bg-card/80 p-6 shadow-[0_16px_45px_-25px_rgba(76,29,149,0.4)] backdrop-blur-sm"
               >
-                <div className="mb-4 inline-flex rounded-xl bg-gradient-to-br from-[#000FFF]/20 to-[#f98f3a]/25 p-3">
+                <div className="mb-4 inline-flex rounded-xl p-3" style={{ background: 'linear-gradient(135deg, rgba(76,29,149,0.2), rgba(13,148,136,0.25))' }}>
                   <item.icon className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="bg-gradient-to-br from-primary via-primary to-[#f98f3a] bg-clip-text text-xl font-semibold text-transparent">
+                <h3 className="bg-clip-text text-xl font-semibold text-transparent" style={{ backgroundImage: GRAD }}>
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
@@ -299,183 +302,134 @@ export default function HomePage() {
         </div>
       </SectionWrapper>
 
-     <SectionWrapper>
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <FadeIn className="mx-auto mb-14 max-w-3xl text-center">
-      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">
-        Section 3
-      </p>
-
-      <h2 className="mb-6 mt-3 bg-gradient-to-r from-[#000FFF] via-primary to-[#f98f3a] bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl">
-        Product Overview
-      </h2>
-
-      <p className="text-lg text-muted-foreground">
-        QuantKawach is an HTTP-layer security solution that wraps existing banking APIs with post-quantum cryptographic protection, requiring zero changes to current infrastructure.
-      </p>
-    </FadeIn>
-
-    {/* NEW DESIGN */}
-    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 text-center">
-      {overviewHighlights.map((item, index) => (
-        <div key={item.title} className="flex flex-col items-center">
-          
-          {/* ICON CIRCLE */}
-          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
-            <item.icon className="h-10 w-10 text-primary" />
-          </div>
-
-          {/* TITLE */}
-          <h3 className="mt-6 text-xl font-semibold text-foreground">
-            {item.title}
-          </h3>
-
-          {/* DESCRIPTION */}
-          <p className="mt-3 text-sm text-muted-foreground max-w-xs">
-            {item.description}
-          </p>
-
-        </div>
-      ))}
-    </div>
-
-  </div>
-</SectionWrapper>
-
-     <SectionWrapper className="bg-secondary/30">
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <FadeIn className="mx-auto mb-14 max-w-3xl text-center">
-      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">
-        Section 4
-      </p>
-
-      <h2 className="mb-6 mt-3 bg-gradient-to-r from-[#000FFF] via-primary to-[#f98f3a] bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl">
-        Key Innovations
-      </h2>
-
-      <p className="text-lg text-muted-foreground">
-        Built for API-scale security with modern cryptographic flexibility.
-      </p>
-    </FadeIn>
-
-    <div className="grid gap-x-10 gap-y-14 md:grid-cols-2 md:gap-y-10 xl:grid-cols-6 xl:gap-y-14">
-      {keyInnovations.map((innovation, index) => (
-        
-        <div
-          key={innovation.title}
-          className={`relative border border-gray-200 bg-white p-6 pt-16 shadow-[6px_6px_0px_#1e293b] xl:col-span-2 ${
-            index === 3 ? 'xl:col-start-2' : index === 4 ? 'xl:col-start-4' : ''
-          }`}
-        >
-          
-          {/* TOP FLOATING ICON */}
-          <div className="absolute -top-10 left-6 flex h-20 w-20 items-center justify-center rounded-full bg-primary text-white shadow-lg">
-            <innovation.icon className="h-10 w-10" />
-          </div>
-
-          {/* CONTENT */}
-          <h3 className="text-lg font-semibold text-foreground">
-            {innovation.title}
-          </h3>
-
-          <p className="mt-3 text-sm text-muted-foreground">
-            {innovation.description}
-          </p>
-
-        </div>
-
-      ))}
-    </div>
-
-  </div>
-</SectionWrapper>
-<SectionWrapper>
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <FadeIn className="mx-auto mb-14 max-w-3xl text-center">
-      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">
-        Section 5
-      </p>
-
-      <h2 className="mb-6 mt-3 bg-gradient-to-r from-[#000FFF] via-primary to-[#f98f3a] bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl">
-        How It Works
-      </h2>
-    </FadeIn>
-
-    {/* MOBILE FLOW */}
-    <div className="space-y-4 md:hidden">
-      {flowSteps.map((step, index) => (
-        <motion.div
-          key={step.label}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: index * 0.05 }}
-          className="flex flex-col items-center"
-        >
-          <div className="relative flex items-center justify-center">
-            <div className="absolute h-24 w-24 rounded-full bg-gradient-to-br from-primary/25 to-[#f98f3a]/35" />
-            <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/20 bg-background shadow-md">
-              <step.icon className="h-7 w-7 text-primary" />
-            </div>
-          </div>
-          <p className="mt-3 text-sm font-semibold text-foreground">{step.label}</p>
-
-          {index < flowSteps.length - 1 && (
-            <ChevronRight className="mt-2 h-5 w-5 rotate-90 text-primary/70" />
-          )}
-        </motion.div>
-      ))}
-    </div>
-
-    {/* DESKTOP/TABLET FLOW */}
-    <div className="hidden md:flex md:items-start md:justify-center">
-      {flowSteps.map((step, index) => (
-        <motion.div
-          key={step.label}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: index * 0.05 }}
-          className="flex items-start"
-        >
-          <div className="relative w-24 flex-none pb-12">
-            <div className="relative flex items-center justify-center">
-              <div className="absolute h-24 w-24 rounded-full bg-gradient-to-br from-primary/25 to-[#f98f3a]/35" />
-              <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/20 bg-background shadow-md">
-                <step.icon className="h-7 w-7 text-primary" />
-              </div>
-            </div>
-            <p className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-sm font-semibold text-foreground">
-              {step.label}
+      <SectionWrapper>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn className="mx-auto mb-14 max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Section 3</p>
+            <h2 className="mb-6 mt-3 bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl" style={{ backgroundImage: GRAD }}>
+              Product Overview
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              QuantKawach is an HTTP-layer security solution that wraps existing banking APIs with post-quantum cryptographic protection, requiring zero changes to current infrastructure.
             </p>
+          </FadeIn>
+
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 text-center">
+            {overviewHighlights.map((item) => (
+              <div key={item.title} className="flex flex-col items-center">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
+                  <item.icon className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="mt-6 text-xl font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-3 text-sm text-muted-foreground max-w-xs">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper className="bg-secondary/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn className="mx-auto mb-14 max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Section 4</p>
+            <h2 className="mb-6 mt-3 bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl" style={{ backgroundImage: GRAD }}>
+              Key Innovations
+            </h2>
+            <p className="text-lg text-muted-foreground">Built for API-scale security with modern cryptographic flexibility.</p>
+          </FadeIn>
+
+          <div className="grid gap-x-10 gap-y-14 md:grid-cols-2 md:gap-y-10 xl:grid-cols-6 xl:gap-y-14">
+            {keyInnovations.map((innovation, index) => (
+              <div
+                key={innovation.title}
+                className={`relative border border-gray-200 bg-white p-6 pt-16 shadow-[6px_6px_0px_#4c1d95] xl:col-span-2 ${
+                  index === 3 ? 'xl:col-start-2' : index === 4 ? 'xl:col-start-4' : ''
+                }`}
+              >
+                <div className="absolute -top-10 left-6 flex h-20 w-20 items-center justify-center rounded-full text-white shadow-lg" style={{ background: GRAD }}>
+                  <innovation.icon className="h-10 w-10" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground">{innovation.title}</h3>
+                <p className="mt-3 text-sm text-muted-foreground">{innovation.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn className="mx-auto mb-14 max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Section 5</p>
+            <h2 className="mb-6 mt-3 bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl" style={{ backgroundImage: GRAD }}>
+              How It Works
+            </h2>
+          </FadeIn>
+
+          <div className="space-y-4 md:hidden">
+            {flowSteps.map((step, index) => (
+              <motion.div
+                key={step.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="flex flex-col items-center"
+              >
+                <div className="relative flex items-center justify-center">
+                  <div className="absolute h-24 w-24 rounded-full opacity-30" style={{ background: GRAD }} />
+                  <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/20 bg-background shadow-md">
+                    <step.icon className="h-7 w-7 text-primary" />
+                  </div>
+                </div>
+                <p className="mt-3 text-sm font-semibold text-foreground">{step.label}</p>
+                {index < flowSteps.length - 1 && (
+                  <ChevronRight className="mt-2 h-5 w-5 rotate-90 text-primary/70" />
+                )}
+              </motion.div>
+            ))}
           </div>
 
-          {index < flowSteps.length - 1 && (
-            <div className="relative flex h-24 w-16 flex-none items-center">
-              <div className="h-[2px] w-full bg-gradient-to-r from-primary to-[#f98f3a]" />
-              <div className="absolute top-1/2 left-1/2 flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-primary bg-background text-xs font-bold text-primary shadow">
-                {index + 1}
-              </div>
-            </div>
-          )}
-        </motion.div>
-      ))}
-    </div>
-
-    {/* FULL FLOW TEXT */}
-   
-
-  </div>
-</SectionWrapper>
+          <div className="hidden md:flex md:items-start md:justify-center">
+            {flowSteps.map((step, index) => (
+              <motion.div
+                key={step.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="flex items-start"
+              >
+                <div className="relative w-24 flex-none pb-12">
+                  <div className="relative flex items-center justify-center">
+                    <div className="absolute h-24 w-24 rounded-full opacity-30" style={{ background: GRAD }} />
+                    <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/20 bg-background shadow-md">
+                      <step.icon className="h-7 w-7 text-primary" />
+                    </div>
+                  </div>
+                  <p className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-sm font-semibold text-foreground">
+                    {step.label}
+                  </p>
+                </div>
+                {index < flowSteps.length - 1 && (
+                  <div className="relative flex h-24 w-16 flex-none items-center">
+                    <div className="h-[2px] w-full" style={{ background: GRAD }} />
+                    <div className="absolute top-1/2 left-1/2 flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-primary bg-background text-xs font-bold text-primary shadow">
+                      {index + 1}
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
 
       <SectionWrapper className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="mx-auto mb-14 max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary-foreground/70">Section 6</p>
-            <h2 className="mb-6 mt-3 bg-gradient-to-r from-[#000FFF] via-primary-foreground to-[#f98f3a] bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl">
+            <h2 className="mb-6 mt-3 bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl" style={{ backgroundImage: 'linear-gradient(135deg, #ffffff, #0d9488)' }}>
               Why Now
             </h2>
             <p className="text-lg text-primary-foreground/80">The quantum threat is accelerating, and financial data has a long exposure lifecycle.</p>
@@ -494,7 +448,7 @@ export default function HomePage() {
                 <div className="mb-4 inline-flex rounded-xl bg-primary-foreground/12 p-3">
                   <reason.icon className="h-5 w-5" />
                 </div>
-                <h3 className="bg-gradient-to-r from-[#000FFF] via-primary-foreground to-[#f98f3a] bg-clip-text text-lg font-semibold text-transparent">
+                <h3 className="bg-clip-text text-lg font-semibold text-transparent" style={{ backgroundImage: 'linear-gradient(135deg, #ffffff, #0d9488)' }}>
                   {reason.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">{reason.description}</p>
@@ -508,7 +462,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="mx-auto mb-12 max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Section 7</p>
-            <h2 className="mb-6 mt-3 bg-gradient-to-r from-[#000FFF] via-primary to-[#f98f3a] bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl">
+            <h2 className="mb-6 mt-3 bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl lg:text-5xl" style={{ backgroundImage: GRAD }}>
               Benefits
             </h2>
             <p className="text-lg text-muted-foreground">Quick advantages aligned with RBI-grade API security expectations.</p>
@@ -544,30 +498,6 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper className="bg-secondary/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Section 8</p>
-            <h2 className="mb-6 mt-3 bg-gradient-to-r from-[#000FFF] via-primary to-[#f98f3a] bg-clip-text font-serif text-3xl font-bold text-transparent md:text-4xl">
-              Secure Your Banking APIs Today
-            </h2>
-            <p className="mb-8 text-lg text-muted-foreground">Move from transport-only security to request-level trust with rapid deployment.</p>
-
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" className="w-full bg-primary px-8 py-6 text-primary-foreground hover:bg-primary/90 sm:w-auto">
-                <Link href="/contact">
-                  Request Demo
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="w-full border-primary/30 bg-background/70 px-8 py-6 hover:bg-primary/5 sm:w-auto">
-                <Link href="/contact">Contact Team</Link>
-              </Button>
-            </div>
-          </FadeIn>
         </div>
       </SectionWrapper>
 

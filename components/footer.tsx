@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { Shield, Mail, MapPin } from 'lucide-react'
+import Image from 'next/image'
+import { Mail, MapPin } from 'lucide-react'
 import { RangoliAnimation } from '@/components/rangoli-animation'
 
 const footerLinks = {
@@ -47,11 +48,13 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <Shield className="w-8 h-8" />
-              <div>
-                <span className="font-serif font-bold text-xl">QuantKawach</span>
-                <span className="block text-xs text-primary-foreground/70">Post-Quantum Security</span>
-              </div>
+              <Image
+                src="/logo2.png"
+                alt="QuantKawach"
+                width={160}
+                height={48}
+                className="h-10 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm text-primary-foreground/70 mb-6 leading-relaxed">
               Securing Indian Banking Infrastructure with Post-Quantum Cryptography

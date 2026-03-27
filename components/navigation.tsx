@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Shield } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 
 const navItems = [
@@ -14,7 +15,6 @@ const navItems = [
   { href: '/security', label: 'Security' },
   { href: '/use-cases', label: 'Use Cases' },
   { href: '/deployment', label: 'Deployment' },
-  { href: '/resources', label: 'Resources' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
@@ -49,19 +49,15 @@ export function Navigation() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative">
-              <Shield className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
-              <div className="absolute inset-0 bg-accent/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif font-bold text-lg lg:text-xl text-primary tracking-tight">
-                QuantKawach
-              </span>
-              <span className="text-[10px] text-muted-foreground -mt-1 hidden sm:block">
-                Post-Quantum Security
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/logo1.png"
+              alt="QuantKawach"
+              width={160}
+              height={48}
+              className="h-10 w-auto object-contain transition-opacity group-hover:opacity-80"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

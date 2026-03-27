@@ -262,30 +262,7 @@ export default function UseCasesPage() {
       </SectionWrapper>
 
       {/* CTA */}
-      <SectionWrapper className="bg-secondary/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6">
-                Ready to Deploy?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Learn about deployment requirements and implementation timeline
-              </p>
-              <Button 
-                asChild 
-                size="lg" 
-                className="w-full bg-primary px-8 text-primary-foreground hover:bg-primary/90 sm:w-auto"
-              >
-                <Link href="/deployment">
-                  View Deployment
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </Button>
-            </FadeIn>
-          </div>
-        </div>
-      </SectionWrapper>
+     
 
       <Footer />
     </div>

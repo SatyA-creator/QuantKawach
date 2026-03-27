@@ -260,30 +260,7 @@ export default function AboutPage() {
       </SectionWrapper>
 
       {/* CTA */}
-      <SectionWrapper className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
-                Join Us in Securing Indian Banking
-              </h2>
-              <p className="text-lg text-primary-foreground/80 mb-8">
-                Partner with QuantKawach to protect your financial infrastructure
-              </p>
-              <Button 
-                asChild 
-                size="lg" 
-                className="w-full bg-primary-foreground px-8 text-primary hover:bg-primary-foreground/90 sm:w-auto"
-              >
-                <Link href="/contact">
-                  Get in Touch
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </Button>
-            </FadeIn>
-          </div>
-        </div>
-      </SectionWrapper>
+     
 
       <Footer />
     </div>

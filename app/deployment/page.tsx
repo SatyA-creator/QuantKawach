@@ -246,98 +246,12 @@ export default function DeploymentPage() {
       </SectionWrapper>
 
       {/* Timeline */}
-      <SectionWrapper>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">
-              Implementation Timeline
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Typical deployment timeline for enterprise implementations
-            </p>
-          </FadeIn>
+     
 
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-translate-x-0.5" />
-              
-              <div className="space-y-8">
-                {timeline.map((phase, index) => (
-                  <motion.div
-                    key={phase.phase}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`relative flex items-center gap-8 ${
-                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                    }`}
-                  >
-                    {/* Dot */}
-                    <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 z-10" />
-                    
-                    {/* Content */}
-                    <div className={`flex-1 ml-12 md:ml-0 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                      <div className="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-shadow">
-                        <div className="mb-2 flex items-center gap-3 md:justify-start">
-                          <Zap className="w-5 h-5 text-accent" />
-                          <h3 className="font-semibold text-lg text-foreground">{phase.phase}</h3>
-                        </div>
-                        <p className="text-sm text-muted-foreground mb-2">{phase.description}</p>
-                        <span className="inline-block px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-sm font-medium">
-                          {phase.duration}
-                        </span>
-                      </div>
-                    </div>
-                    
-                    {/* Spacer for alternating layout */}
-                    <div className="hidden md:block flex-1" />
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </SectionWrapper>
+
 
       {/* CTA */}
-      <SectionWrapper className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
-                Start Your Deployment
-              </h2>
-              <p className="text-lg text-primary-foreground/80 mb-8">
-                Contact our team to begin the assessment phase for your infrastructure
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button 
-                  asChild 
-                  size="lg" 
-                  className="w-full bg-primary-foreground px-8 text-primary hover:bg-primary-foreground/90 sm:w-auto"
-                >
-                  <Link href="/contact">
-                    Contact Us
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  size="lg"
-                  className="w-full border-primary-foreground/20 px-8 text-primary-foreground hover:bg-primary-foreground/10 sm:w-auto"
-                >
-                  <Link href="/resources">
-                    View Resources
-                  </Link>
-                </Button>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </SectionWrapper>
+     
 
       <Footer />
     </div>

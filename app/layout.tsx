@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: 'QuantKawach | Post-Quantum Security for Indian Banking',
   description: 'HTTP-Layer Post-Quantum Cryptography for Indian Banking APIs. Protecting UPI, RTGS, NEFT with quantum-resistant encryption.',
   keywords: ['post-quantum cryptography', 'banking security', 'RBI', 'UPI', 'RTGS', 'NEFT', 'quantum-resistant'],
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
