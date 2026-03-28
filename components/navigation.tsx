@@ -85,11 +85,7 @@ export function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="/contact">Get Started</Link>
-            </Button>
-          </div>
+         
 
           {/* Mobile Menu Button */}
           <button

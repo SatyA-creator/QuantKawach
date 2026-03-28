@@ -201,13 +201,11 @@ export default function HomePage() {
                 className="mt-9 flex flex-col items-center gap-4 sm:flex-row lg:justify-start"
               >
                 <Button asChild size="lg" className="w-full bg-primary px-8 py-6 sm:w-auto">
-                  <Link href="/product">
-                    View Product <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link href="/">
+                    Read Whitepaper <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="w-full px-8 py-6 sm:w-auto">
-                  <Link href="/resources#whitepaper">Read Whitepaper</Link>
-                </Button>
+              
               </motion.div>
             </div>
 

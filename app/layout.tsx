@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   description: 'HTTP-Layer Post-Quantum Cryptography for Indian Banking APIs. Protecting UPI, RTGS, NEFT with quantum-resistant encryption.',
   keywords: ['post-quantum cryptography', 'banking security', 'RBI', 'UPI', 'RTGS', 'NEFT', 'quantum-resistant'],
   icons: {
-    icon: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
   },
 }
 
